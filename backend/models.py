@@ -79,6 +79,8 @@ class Item(models.Model):
             verbose_name = "04. Item"
             verbose_name_plural = "04. Item"
 
+
+
 # ==========================================
 # 3. Production & Manufacturing Module
 # ==========================================
@@ -152,6 +154,16 @@ class ProductionOrder(models.Model):
         verbose_name_plural = "07. Production Orders"
 
 
+class Bom(models.Model):
+    name = models.CharField(max_length=200)
+    
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+            verbose_name = "06. BOM"
+            verbose_name_plural = "06. BOM"
 
 
 class BillOfMaterials(models.Model):
